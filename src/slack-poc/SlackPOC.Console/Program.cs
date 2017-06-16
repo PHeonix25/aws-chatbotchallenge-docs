@@ -1,10 +1,11 @@
-﻿namespace SlackPOC.Console
+﻿namespace SlackPOC
 {
     class Program
     {
         static void Main(string[] args)
         {
-            System.Console.WriteLine(Core.Constants.DEFAULT_WELCOME);
+            var auth = GetTokensAndShit.CompleteOAuth();
+            OutgoingMessages.PostMessage(auth, "Test!");
         }
     }
 }
