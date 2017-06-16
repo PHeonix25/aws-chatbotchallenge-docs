@@ -2,10 +2,10 @@
 Documentation for our AWS Chatbot Challenge
 
 ## Planned Process Overview
-![Business Process Flow](BusinessProcessFlow.png)
+![Business Process Flow](images/BusinessProcessFlow.png)
 
 ## Planned Development Languages 
-![Development Langugages](LanguageFlow.png)
+![Development Langugages](images/LanguageFlow.png)
 
 ## Technical Drill-down
-![Technical Process Diagram](TechnicalFlow.png)
+![Technical Process Diagram](images/TechnicalFlow.png)
