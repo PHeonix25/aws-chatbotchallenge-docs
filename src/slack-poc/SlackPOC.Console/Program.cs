@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            System.Console.WriteLine(Core.Class1.DEFAULT_WELCOME);
+            System.Console.WriteLine(Core.Constants.DEFAULT_WELCOME);
         }
     }
 }

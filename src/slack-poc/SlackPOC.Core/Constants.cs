@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace SlackPOC.Core
+﻿namespace SlackPOC.Core
 {
-    public class Class1
+    public class Constants
     {
         public const string DEFAULT_WELCOME = "Hello World";
     }
