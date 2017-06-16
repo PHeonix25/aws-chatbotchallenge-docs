@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SlackPOC.Console", "SlackPO
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SlackPOC.Core", "SlackPOC.Core\SlackPOC.Core.csproj", "{8E3CDE79-94BC-46EF-BACB-0BE1BD171C58}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SlackAPI.NetCore", "..\..\..\SlackAPI\SlackAPI\SlackAPI.NetCore.csproj", "{B24705DA-C011-4D34-A95C-CE609944E5D6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8E3CDE79-94BC-46EF-BACB-0BE1BD171C58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E3CDE79-94BC-46EF-BACB-0BE1BD171C58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E3CDE79-94BC-46EF-BACB-0BE1BD171C58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B24705DA-C011-4D34-A95C-CE609944E5D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B24705DA-C011-4D34-A95C-CE609944E5D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B24705DA-C011-4D34-A95C-CE609944E5D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B24705DA-C011-4D34-A95C-CE609944E5D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
