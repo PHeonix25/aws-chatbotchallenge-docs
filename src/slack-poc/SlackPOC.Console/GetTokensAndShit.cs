@@ -7,14 +7,27 @@ namespace SlackPOC
 {
     public class GetTokensAndShit
     {
-        public static OAuthResponse CompleteOAuth()
+        private const string OAUTH_FILE = ".oauth";
+
+        public static string GetOAuthToken(bool forceReplace = false)
+        {
+            var existingToken = LoadTokenFromFile();
+            if (!String.IsNullOrEmpty(existingToken) && !forceReplace)
+                return existingToken;
+
+            var oauth = CompleteOAuth();
+            SaveTokenToFile(oauth);
+            return oauth;
+        }
+
+        private static string CompleteOAuth()
         {
             var state = Guid.NewGuid().ToString();
-            
-            var uri = SlackClient.GetAuthorizeUri(Constants.CLIENT_ID, 
-                SlackScope.Identify | SlackScope.Read | SlackScope.Post, 
-                Constants.CALLBACK_URI, 
-                state, 
+
+            var uri = SlackClient.GetAuthorizeUri(Constants.CLIENT_ID,
+                SlackScope.Identify | SlackScope.Read | SlackScope.Post,
+                Constants.CALLBACK_URI,
+                state,
                 Constants.TEAM_NAME);
 
             Console.WriteLine("Launching: " + uri);
@@ -36,7 +49,14 @@ namespace SlackPOC
             if (state != newState)
                 throw new InvalidOperationException("State mismatch. You're trying to trick me!");
 
-            return new OAuthResponse(code, newState);
+            return code;
         }
+
+        private static string LoadTokenFromFile() =>
+            (System.IO.File.Exists(OAUTH_FILE))
+                ? System.IO.File.ReadAllText(OAUTH_FILE)
+                : String.Empty;
+
+        private static void SaveTokenToFile(string token) => System.IO.File.WriteAllText(OAUTH_FILE, token);
     }
 }
