@@ -1,9 +1,9 @@
 ﻿using System.Diagnostics;
 using System.Runtime.InteropServices;
 
-namespace SlackPOC
+namespace SlackPOC.Core
 {
-    class OpenBrowserHack
+    public class OpenBrowserHack
     {
         public static void OpenBrowser(string url)
         {
