@@ -36,5 +36,10 @@ namespace SlackPOC
 
             return client;
         }
+
+        public static SlackClient IWantAClient()
+        {
+            return GetSlackClient(GetTokensAndShit.GetOAuthToken(false));
+        }
     }
 }
